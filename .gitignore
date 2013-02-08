@@ -1,13 +1,47 @@
-# Java Files #
+##< Java Stuff >#
+
 *.class
+
+# Package Files
 *.jar
 *.war
 *.ear
 
-# Eclipse Files #
-.classpath
-.project
-.settings/
+##</ Java Stuff >#
 
-# Maven Files #
-target
+##< Maven Stuff >#
+
+target/
+
+##</ Maven Stuff >#
+
+##< Eclipse Stuff >#
+
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+##</ Eclipse Stuff >#
