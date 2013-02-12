@@ -45,3 +45,9 @@ local.properties
 .buildpath
 
 ##</ Eclipse Stuff >#
+
+##< Mac Stuff >#
+
+.DS_Store
+
+##</ Mac Studd >#
