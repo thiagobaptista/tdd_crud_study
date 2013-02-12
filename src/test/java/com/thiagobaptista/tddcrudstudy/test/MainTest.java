@@ -9,13 +9,6 @@ import com.thiagobaptista.tddcrudstudy.Product;
 public class MainTest
 {
 	@Test
-	public void should_a_product_have_a_name()
-	{
-		Product p = new Product();
-		p.setName("Notebook Negativo");
-	}
-	
-	@Test
 	public void should_two_products_with_different_names_be_different()
 	{
 		Product p1 = new Product();
