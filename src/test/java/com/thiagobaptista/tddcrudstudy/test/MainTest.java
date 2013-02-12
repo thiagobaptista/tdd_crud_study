@@ -48,6 +48,6 @@ public class MainTest
 	public void should_a_product_have_a_category()
 	{
 		Product p = new Product();
-		p.setCategory();
+		p.setCategory("Electronics");
 	}
 }
