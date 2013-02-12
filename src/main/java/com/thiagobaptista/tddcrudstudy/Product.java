@@ -13,4 +13,8 @@ public class Product
 		return name;
 	}
 
+	public void setCategory(String string)
+	{
+		// TODO Auto-generated method stub		
+	}
 }
