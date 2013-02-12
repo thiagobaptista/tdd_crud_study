@@ -55,4 +55,15 @@ public class MainTest
 		
 		assertNotEquals(p1.getName(), p2.getName());
 	}
+	
+	@Test
+	public void should_register_a_product_into_a_catalog()
+	{
+		Product p = new Product();
+		p.setName("Flux Capacitor");
+		p.setCategory("Time-travelling Wares");
+		
+		Catalog c = new Catalog();
+		c.register(p);
+	}
 }
