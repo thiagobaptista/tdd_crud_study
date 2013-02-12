@@ -26,6 +26,19 @@ public class MainTest
 	}
 	
 	@Test
+	public void should_not_a_catalog_contain_an_unregistered_product()
+	{
+		Product p = new Product();
+		p.setName("Flux Capacitor");
+		p.setCategory("Time-travelling Wares");
+		
+		Catalog c = new Catalog();
+		
+		Collection<Product> registeredProducts = c.getAllProducts();
+		assertFalse( registeredProducts.contains(p) );
+	}
+	
+	@Test
 	public void should_an_empty_catalog_have_no_product()
 	{
 		Catalog c = new Catalog();
