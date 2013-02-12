@@ -31,4 +31,16 @@ public class MainTest
 		
 		assertEquals(p1.getName(), p2.getName());
 	}
+	
+	@Test
+	public void should_two_products_with_different_names_be_named_differently()
+	{
+		Product p1 = new Product();
+		p1.setName("Narnia Closet");
+		
+		Product p2 = new Product();
+		p2.setName("Willow-with-Dragon-heart-string Wand");
+		
+		assertNotEquals(p1.getName(), p2.getName());
+	}
 }
