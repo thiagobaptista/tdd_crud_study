@@ -1,6 +1,6 @@
 package com.thiagobaptista.tddcrudstudy.test;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.util.Collection;
 
@@ -23,5 +23,15 @@ public class MainTest
 		
 		Collection<Product> registeredProducts = c.getAllProducts();
 		assertTrue( registeredProducts.contains(p) );
+	}
+	
+	@Test
+	public void should_an_empty_catalog_have_no_product()
+	{
+		Catalog c = new Catalog();
+		
+		Collection<Product> registeredProducts = c.getAllProducts();
+		
+		assertTrue( registeredProducts.isEmpty() );
 	}
 }
