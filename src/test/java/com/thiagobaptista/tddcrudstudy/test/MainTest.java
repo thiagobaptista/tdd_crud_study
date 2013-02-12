@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.thiagobaptista.tddcrudstudy.Catalog;
 import com.thiagobaptista.tddcrudstudy.Product;
 
 public class MainTest
