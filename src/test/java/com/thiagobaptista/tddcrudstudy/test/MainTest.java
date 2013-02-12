@@ -1,8 +1,8 @@
 package com.thiagobaptista.tddcrudstudy.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.junit.Test;
 
@@ -32,7 +32,7 @@ public class MainTest
 		Catalog c = new Catalog();
 		c.register(p);
 		
-		List<Product> registeredProducts = c.getAllProducts();
+		Collection<Product> registeredProducts = c.getAllProducts();
 		assertTrue( registeredProducts.contains(p) );
 	}
 }
