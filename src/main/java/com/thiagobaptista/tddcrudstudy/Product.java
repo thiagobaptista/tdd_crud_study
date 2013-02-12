@@ -2,16 +2,15 @@ package com.thiagobaptista.tddcrudstudy;
 
 public class Product
 {
-
-	public void setName(String string)
+	private String name;
+	
+	public void setName(String name)
 	{
-		// TODO Auto-generated method stub
-		
+		this.name = name;		
 	}
 
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		return name;
 	}
 
 }
