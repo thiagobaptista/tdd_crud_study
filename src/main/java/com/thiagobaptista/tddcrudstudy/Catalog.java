@@ -5,15 +5,10 @@ import java.util.Collection;
 
 public class Catalog
 {
-	private Collection<Product> registeredProducts;
+	private Collection<Product> registeredProducts = new ArrayList<Product>(0);
 	
 	public void register(Product p)
-	{
-		if (registeredProducts == null)
-		{
-			registeredProducts = new ArrayList<Product>(0);
-		}
-		
+	{		
 		registeredProducts.add(p);
 	}
 
