@@ -72,6 +72,29 @@ public class MainTest
 		assertEquals(1, registeredProducts.size());
 	}
 	
+	@Test
+	public void should_a_catalog_register_equal_products_only_once()
+	{
+		Product p1 = getProduct();
+		Product p2 = getProduct();
+		Product p3 = getProduct();
+		Product p4 = getProduct();
+		
+		Catalog c = new Catalog();
+		c.register(p1);
+		c.register(p2);
+		c.register(p3);
+		c.register(p4);
+		
+		Collection<Product> registeredProducts = c.getAllProducts();
+		
+		assertTrue( registeredProducts.contains(p1) );
+		assertTrue( registeredProducts.contains(p2) );
+		assertTrue( registeredProducts.contains(p3) );
+		assertTrue( registeredProducts.contains(p4) );
+		assertEquals(1, registeredProducts.size());
+	}
+	
 	private Product getProduct()
 	{
 		Product p = new Product();
