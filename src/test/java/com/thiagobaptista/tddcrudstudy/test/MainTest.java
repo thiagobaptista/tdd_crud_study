@@ -55,6 +55,23 @@ public class MainTest
 		assertTrue( registeredProducts.isEmpty() );
 	}
 	
+	@Test
+	public void should_a_catalog_register_a_product_only_once()
+	{
+		Product p = getProduct();
+		
+		Catalog c = new Catalog();
+		c.register(p);
+		c.register(p);
+		c.register(p);
+		c.register(p);
+		
+		Collection<Product> registeredProducts = c.getAllProducts();
+		
+		assertTrue( registeredProducts.contains(p) );
+		assertEquals(1, registeredProducts.size());
+	}
+	
 	private Product getProduct()
 	{
 		Product p = new Product();
