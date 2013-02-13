@@ -14,9 +14,7 @@ public class MainTest
 	@Test
 	public void should_fetch_previously_registered_product_from_catalog()
 	{
-		Product p = new Product();
-		p.setName("Flux Capacitor");
-		p.setCategory("Time-travelling Wares");
+		Product p = getProduct();
 		
 		Catalog c = new Catalog();
 		c.register(p);
@@ -28,9 +26,7 @@ public class MainTest
 	@Test
 	public void should_not_a_catalog_contain_an_unregistered_product()
 	{
-		Product p = new Product();
-		p.setName("Flux Capacitor");
-		p.setCategory("Time-travelling Wares");
+		Product p = getProduct();
 		
 		Catalog c = new Catalog();
 		
@@ -46,5 +42,14 @@ public class MainTest
 		Collection<Product> registeredProducts = c.getAllProducts();
 		
 		assertTrue( registeredProducts.isEmpty() );
+	}
+	
+	private Product getProduct()
+	{
+		Product p = new Product();
+		p.setName("Flux Capacitor");
+		p.setCategory("Time-travelling Wares");
+		
+		return p;
 	}
 }
