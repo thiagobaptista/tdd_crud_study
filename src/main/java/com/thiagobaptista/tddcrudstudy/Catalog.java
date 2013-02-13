@@ -1,11 +1,11 @@
 package com.thiagobaptista.tddcrudstudy;
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 
 public class Catalog
 {
-	private Collection<Product> registeredProducts = new ArrayList<Product>(0);
+	private Collection<Product> registeredProducts = new HashSet<Product>(0);
 	
 	public void register(Product p)
 	{		
