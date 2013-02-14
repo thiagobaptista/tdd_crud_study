@@ -69,4 +69,18 @@ public class ProductTest
 		
 		assertEquals(p1, p2);
 	}
+	
+	@Test
+	public void should_two_equal_products_have_the_same_hashcode()
+	{
+		Product p1 = new Product();
+		p1.setName("Space Personality Core");
+		p1.setCategory("Rogue AIs & Accessories");
+		
+		Product p2 = new Product();
+		p2.setName("Space Personality Core");
+		p2.setCategory("Rogue AIs & Accessories");
+		
+		assertEquals(p1.hashCode(), p2.hashCode());
+	}
 }
