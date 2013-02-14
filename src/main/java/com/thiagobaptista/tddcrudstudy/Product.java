@@ -14,9 +14,9 @@ public class Product
 		return name;
 	}
 
-	public void setCategory(String string)
+	public void setCategory(String category)
 	{
-		// TODO Auto-generated method stub		
+		this.category = category;
 	}
 	
 	@Override
