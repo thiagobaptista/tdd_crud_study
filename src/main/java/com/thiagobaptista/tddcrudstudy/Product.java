@@ -3,6 +3,7 @@ package com.thiagobaptista.tddcrudstudy;
 public class Product
 {
 	private String name;
+	private Object category;
 	
 	public void setName(String name)
 	{
