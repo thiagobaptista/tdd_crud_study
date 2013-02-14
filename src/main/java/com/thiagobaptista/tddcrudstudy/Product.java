@@ -40,9 +40,6 @@ public class Product
 			}
 		}
 		
-		System.out.println(" This hashCode: " + this.hashCode());
-		System.out.println("Other hashCode: " + other.hashCode());
-		
 		return true;
 	}
 	

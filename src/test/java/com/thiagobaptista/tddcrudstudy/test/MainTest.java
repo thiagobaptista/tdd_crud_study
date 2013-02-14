@@ -12,28 +12,6 @@ import com.thiagobaptista.tddcrudstudy.Product;
 public class MainTest
 {	
 	@Test
-	public void should_fetch_previously_registered_products_from_catalog()
-	{
-		Product p1 = getProduct();
-		Product p2 = getProduct();
-		Product p3 = getProduct();
-		Product p4 = getProduct();
-		
-		Catalog c = new Catalog();
-		c.register(p1);
-		c.register(p2);
-		c.register(p3);
-		c.register(p4);
-		
-		Collection<Product> registeredProducts = c.getAllProducts();
-		
-		assertTrue( registeredProducts.contains(p1) );
-		assertTrue( registeredProducts.contains(p2) );
-		assertTrue( registeredProducts.contains(p3) );
-		assertTrue( registeredProducts.contains(p4) );
-	}
-	
-	@Test
 	public void should_not_a_catalog_contain_an_unregistered_product()
 	{
 		Product p = getProduct();
