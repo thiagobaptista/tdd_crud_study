@@ -45,4 +45,10 @@ public class Product
 		
 		return true;
 	}
+	
+	@Override
+	public int hashCode()
+	{
+		return 0;
+	}
 }
