@@ -17,4 +17,17 @@ public class Product
 	{
 		// TODO Auto-generated method stub		
 	}
+	
+	@Override
+	public boolean equals(Object product)
+	{
+		Product other = (Product) product;
+		
+		if ( !other.name.equals(this.name) )
+		{
+			return false;
+		}
+		
+		return true;
+	}
 }
