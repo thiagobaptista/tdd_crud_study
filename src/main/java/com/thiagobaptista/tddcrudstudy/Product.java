@@ -23,9 +23,12 @@ public class Product
 	{
 		Product other = (Product) product;
 		
-		if ( !other.name.equals(this.name) )
+		if (other.name != null)
 		{
-			return false;
+			if ( !other.name.equals(this.name) )
+			{
+				return false;
+			}
 		}
 		
 		return true;
