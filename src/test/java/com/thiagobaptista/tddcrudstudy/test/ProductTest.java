@@ -83,4 +83,18 @@ public class ProductTest
 		
 		assertEquals(p1.hashCode(), p2.hashCode());
 	}
+	
+	@Test
+	public void should_two_different_products_have_different_hashcodes()
+	{
+		Product p1 = new Product();
+		p1.setName("Space Personality Core");
+		p1.setCategory("Rogue AIs & Accessories");
+		
+		Product p2 = new Product();
+		p2.setName("TARDIS");
+		p2.setCategory("Time-travelling Wares");
+		
+		assertNotEquals(p1.hashCode(), p2.hashCode());
+	}
 }
