@@ -31,6 +31,11 @@ public class Product
 			}
 		}
 		
+		if ( !other.category.equals(this.category) )
+		{
+			return false;
+		}
+		
 		return true;
 	}
 }
