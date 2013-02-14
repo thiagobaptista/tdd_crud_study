@@ -95,6 +95,38 @@ public class MainTest
 		assertEquals(1, registeredProducts.size());
 	}
 	
+	@Test
+	public void should_a_catalog_register_different_products_multiple_times()
+	{
+		Product p1 = getProduct();
+		
+		Product p2 = new Product();
+		p2.setName("GLaDOS");
+		p2.setCategory("Rogue AIs & Accessories");
+		
+		Product p3 = new Product();
+		p3.setName("TARDIS");
+		p3.setCategory("Time-travelling Wares");
+		
+		Product p4 = new Product();
+		p4.setName("Kama Sutra");
+		p4.setCategory("Books");
+		
+		Catalog c = new Catalog();
+		c.register(p1);
+		c.register(p2);
+		c.register(p3);
+		c.register(p4);
+		
+		Collection<Product> registeredProducts = c.getAllProducts();
+		
+		assertTrue( registeredProducts.contains(p1) );
+		assertTrue( registeredProducts.contains(p2) );
+		assertTrue( registeredProducts.contains(p3) );
+		assertTrue( registeredProducts.contains(p4) );
+		assertEquals(4, registeredProducts.size());
+	}
+	
 	private Product getProduct()
 	{
 		Product p = new Product();
