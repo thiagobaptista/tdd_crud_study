@@ -55,4 +55,18 @@ public class ProductTest
 		
 		assertNotEquals(p1.getName(), p2.getName());
 	}
+	
+	@Test
+	public void should_two_equal_products_be_equal()
+	{
+		Product p1 = new Product();
+		p1.setName("Space Personality Core");
+		p1.setCategory("Rogue AIs & Accessories");
+		
+		Product p2 = new Product();
+		p2.setName("Space Personality Core");
+		p2.setCategory("Rogue AIs & Accessories");
+		
+		assertEquals(p1, p2);
+	}
 }
