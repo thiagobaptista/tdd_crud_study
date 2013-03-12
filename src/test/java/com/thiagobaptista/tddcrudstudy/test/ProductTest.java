@@ -95,6 +95,10 @@ public class ProductTest
 		p2.setName("TARDIS");
 		p2.setCategory("Time-travelling Wares");
 		
+		Product p3 = new Product();
+		p3.setName("TARDIS");
+		
 		assertNotEquals(p1.hashCode(), p2.hashCode());
+		assertNotEquals(p2.hashCode(), p3.hashCode());
 	}
 }
