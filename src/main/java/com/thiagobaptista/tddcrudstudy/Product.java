@@ -51,7 +51,12 @@ public class Product
 		
 		if (name != null)
 		{
-			hashCode = name.hashCode();
+			hashCode += name.hashCode();
+		}
+		
+		if (category != null)
+		{
+			hashCode += category.hashCode();
 		}
 		
 		return hashCode;
