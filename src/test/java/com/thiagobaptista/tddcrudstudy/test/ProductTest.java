@@ -99,7 +99,6 @@ public class ProductTest
 		p3.setName("TARDIS");
 		
 		assertNotEquals(p1.hashCode(), p2.hashCode());
-		assertNotEquals(p1.hashCode(), p3.hashCode());
 	}
 	
 	@Test
