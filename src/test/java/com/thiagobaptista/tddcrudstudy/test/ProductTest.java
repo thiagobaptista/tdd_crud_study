@@ -100,5 +100,6 @@ public class ProductTest
 		
 		assertNotEquals(p1.hashCode(), p2.hashCode());
 		assertNotEquals(p2.hashCode(), p3.hashCode());
+		assertNotEquals(p1.hashCode(), p3.hashCode());
 	}
 }
