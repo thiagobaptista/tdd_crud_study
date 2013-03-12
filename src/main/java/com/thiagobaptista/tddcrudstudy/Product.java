@@ -10,7 +10,8 @@ public class Product
 		this.name = name;		
 	}
 
-	public String getName() {
+	public String getName() 
+	{
 		return name;
 	}
 
@@ -46,6 +47,13 @@ public class Product
 	@Override
 	public int hashCode()
 	{
-		return 0;
+		int hashCode = 0;
+		
+		if (name != null)
+		{
+			hashCode = name.hashCode();
+		}
+		
+		return hashCode;
 	}
 }
