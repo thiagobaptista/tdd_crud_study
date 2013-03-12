@@ -99,7 +99,19 @@ public class ProductTest
 		p3.setName("TARDIS");
 		
 		assertNotEquals(p1.hashCode(), p2.hashCode());
-		assertNotEquals(p2.hashCode(), p3.hashCode());
 		assertNotEquals(p1.hashCode(), p3.hashCode());
+	}
+	
+	@Test
+	public void should_two_products_with_or_without_categories_have_different_hashcodes()
+	{
+		Product p1 = new Product();
+		p1.setName("TARDIS");
+		p1.setCategory("Time-travelling Wares");
+		
+		Product p2 = new Product();
+		p2.setName("TARDIS");
+		
+		assertNotEquals(p1.hashCode(), p2.hashCode());
 	}
 }
